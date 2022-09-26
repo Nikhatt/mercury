@@ -1,6 +1,11 @@
 <template>
 <div>
-    <h1> this is my first vue.js </h1>
+   <router-link  to="/"> Home </router-link><br/>
+   <router-link  to="/form"> Form</router-link><br/>
+   <router-link  to="/profile"> Profile </router-link>
+    <router-view/>
+
+    <!-- <h1> This is my first webpage </h1> -->
     <!-- <h1> user name is: {{name}} </h1> 
     <HomePage  msg= 'table of person-information' /> -->
     <!-- <Condition :name="veg" :info="user"  /> -->
@@ -11,32 +16,33 @@
     <!-- <li v-for="item  in users" :key="item.name"  > 
         <condition :info="item" @getData="hello(item.name)" />
     </li>
- </ul> --> -->
+ </ul> -->
     <!-- <VueHtml /> -->
-    <ClassBinding/>
+    <!-- <ClassBinding/> -->
     <!-- <ChildParent  :getname="getusername" />/ -->
- <!-- <Ref/>-->
- <Form/>
+    <!-- <Ref/>-->
+    <!-- <Form /> -->
+    <!-- <Profile /> -->
 </div>
 </template>
 
 <script>
-//import Ref from './components/ref.vue';
-import Form from './components/form.vue';
+//import Ref from './components/Ref.vue';
+// import Form from './components/Form.vue';
+// import Profile from './components/Profile.vue';
 //import HomePage from './components/HomePage.vue';
-//import Condition from './components/condition.vue';
-//import VueHtml from './components/vueHtml.vue';
-
-import ClassBinding from './components/classBinding.vue';
-
+//import Condition from './components/Condition.vue';
+//import VueHtml from './components/VueHtml.vue';
+// import ClassBinding from './components/ClassBinding.vue';
 // import ChildParent from './childParent.vue';
 
 export default {
     name: 'App',
     components: {
     // Ref,
-    ClassBinding,
-    Form
+    // ClassBinding,
+    // Form,
+    // Profile
 },
     // data() {
     //     return {
@@ -72,10 +78,8 @@ export default {
 }
 </script>
 
-<!-- // 
-
-<style>
-// #app {
+<style scoped>
+/* // #app {
 //     font-family: Avenir, Helvetica, Arial, sans-serif;
 //     -webkit-font-smoothing: antialiased;
 //     -moz-osx-font-smoothing: grayscale;
@@ -83,5 +87,14 @@ export default {
 //     color: #2c3e50;
 //     margin-top: 60px;
 // }
-// 
-</style> -->
+//  */
+h1 {
+
+    color: chocolate;
+    width: -moz-fit-content;
+    background-color: thistle;
+    font-size: -webkit-xxx-large;
+    text-align: center;
+    margin: 50px;
+}
+</style>

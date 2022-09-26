@@ -1,37 +1,39 @@
 <template>
 <div>
     <h1> FILL FORM</h1>
-   <ul>
-     <li v-for="item in error" :key=" item">
-    {{item}} is empty</li></ul>
+   
     <form>
-        <level> email:</level>
+        <label> Email : </label>
         <input type="text" placeholder="enter  your email address" v-model="form.email"> <br /><br />
 
-        <level> password:</level>
+        <label> Password : </label>
         <input type="password" placeholder=" your password" v-model="form.password"> <br /><br />
 
-        <level> Nationality</level>
+        <label> Nationality : </label>
         <select v-model="form.country">
             <option>India</option>
             <option>nepal</option>
         </select>
 
-        <h3>gender</h3>
-        <level> male:</level>
+        <h3>Gender</h3>
+        <label> Male </label>
         <input type="radio" name="gender" value="male" v-model="form.gender">
-        <level> female:</level>
+        <label> Female </label>
         <input type="radio" name="gender" value="female" v-model="form.gender"> <br /><br />
 
-        <h3> technology</h3>
-        <level> java </level>
+        <h3> Technology</h3>
+        <label> java </label>
         <input type="checkbox" value="java" v-model="form.technology">
-        <level> html</level>
+        <label> html</label>
         <input type="checkbox" value="html" v-model="form.technology">
-        <level> vue </level>
-        <input type="checkbox" value="vue" v-model="form.technology"> <br /><br />
+        <label> vue </label>
+        <input type="checkbox" value="vue" v-model="form.technology"> <br /><br /><br/>
 
-        <button @click="login()" type="button"> login </button><br /><br />
+        <button @click="login()" type="button" > login </button><br /><br />
+        <ul>
+        <li v-for="item in error" :key=" item">
+            {{item}} is empty</li>
+    </ul>
     </form>
 </div>
 </template>
@@ -61,7 +63,7 @@ export default {
                 }
 
             }
-            if (this.error.length ===0) {
+            if (this.error.length === 0) {
                 alert("data has been submitted")
             }
             console.log(this.error)
@@ -70,3 +72,23 @@ export default {
 
 }
 </script>
+
+<style>
+ h1 {
+     text-align: center;
+     color: aquamarine;
+     background-color: rgb(119, 116, 116);
+ }
+
+ form {text-align: center; }
+ h3{
+    background-color: rgb(192, 187, 187);
+    
+ }
+ button{
+ 
+    font-size: x-large;
+    background-color: aquamarine;
+    box-shadow: skyblue;
+    border: inset;}
+</style>
