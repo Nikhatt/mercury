@@ -3,7 +3,7 @@
 <h1> PROFILE </h1>
 <p>
 
-I am  <br/>
+I am {{profile}} <br/>
 Nationality : <br/>
 Gender:<br/>
 technology :<br/>
@@ -13,8 +13,20 @@ technology :<br/>
 </template>
 
 <script>
+import {useRoute}   from 'vue-router';
+
 export default {
-    name: " YourProfile"
+    name: " YourProfile",
+    data(){
+        return{ profile:""}
+    },
+
+    mounted()
+    {
+        const route = useRoute();
+        console.log('route',route.params.name);
+        this.profile = route.params.name;
+    }
 }
 </script>
 <style scoped>

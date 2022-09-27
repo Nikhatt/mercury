@@ -1,9 +1,11 @@
 <template>
 <div>
-   <router-link  to="/"> Home </router-link><br/>
-   <router-link  to="/form"> Form</router-link><br/>
-   <router-link  to="/profile"> Profile </router-link>
-    <router-view/>
+    <router-link to="/"> Home </router-link> <br />
+    <router-link to="/form"> Form</router-link> <br />
+    <router-link to="/profile/nikhat"> Nikhat's Profile </router-link> <br />
+    <router-link to="/profile/wakar"> Wakar's Profile </router-link> <br />
+    <router-link to="/profile/alishba"> Alishba's Profile </router-link>
+    <router-view /> <br />
 
     <!-- <h1> This is my first webpage </h1> -->
     <!-- <h1> user name is: {{name}} </h1> 
@@ -39,11 +41,11 @@
 export default {
     name: 'App',
     components: {
-    // Ref,
-    // ClassBinding,
-    // Form,
-    // Profile
-},
+        // Ref,
+        // ClassBinding,
+        // Form,
+        // Profile
+    },
     // data() {
     //     return {
     //         name: ""

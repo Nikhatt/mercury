@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router"
 import Home from './components/Home.vue'
 import Profile from './components/Profile.vue'
 import Form from './components/Form.vue'
+import   PageNotFound from './components/PageNotFound.vue'
 
 const routes = [
     {
@@ -16,8 +17,13 @@ const routes = [
     },
     {
         name: 'Profile',
-        path: '/profile',
+        path: '/profile/:name',
         component: Profile,
+    },
+    {
+        name: 'NotFound',
+        path: '/:pathMatch(.*)*',
+        component: PageNotFound,
     },
 ];
 
